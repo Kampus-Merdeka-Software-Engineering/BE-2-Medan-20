@@ -24,11 +24,11 @@ export const createProducts = async(req, res) =>{
     const {name, price} = req.body;
 
     try {
-        await Product.create({
+        const product = await Product.create({
             name: name,
             price: price
         })
-        res.status(201).json({msg: 'Product Created Successfully'});
+        res.status(201).json({msg: 'Product Created Successfully',  productId: product.id});
     } catch (error) {
         res.status(500).json({msg: error.message});
     }
