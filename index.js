@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import productRoute from './routes/productRoute.js';
 import orderRoute from './routes/orderRoute.js';
+import "dotenv/config";
 
 const app = express();
 app.use(express.json());
@@ -12,7 +13,7 @@ app.use(productRoute)
 app.use(orderRoute)
 
 app.get("/", (req,res) =>{
-    res.send("Hello we are group 20 team J section medan")
+    res.send("Hello everyone we are group 20 team J section medan")
 });
 
 //database
@@ -22,7 +23,7 @@ db.sync({ force: false }).then(() => {
   });
 
 // port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 app.listen(port, ()=>{
     console.log(`server up and running on port ${port}.`)
 });

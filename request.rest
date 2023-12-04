@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH  http://localhost:5000/product/2
+PATCH  http://localhost:5000/product/1
 Content-Type: application/json
 
 {
@@ -23,3 +23,32 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/product/3
+
+###
+POST http://localhost:5000/add-to-order
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "name": "Bionico Fruit salad",
+    "price": 19.99,
+    "quantity": 2
+}
+
+###
+GET http://localhost:5000/view-order/6
+
+###
+POST http://localhost:5000/place-order
+Content-Type: application/json
+
+{
+    "orderId": 6,
+    "name": "Jhon",
+    "phone": "123456789",
+    "address": "Jl. Merdeka",
+    "isCompleted": true
+}
+
+###
+GET http://localhost:5000/view-order-detail/6

@@ -9,6 +9,10 @@ const Order = db.define('orders', {
         autoIncrement: true,
         primaryKey: true,
     },
+    isCompleted:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+    },
     name:{
         type: DataTypes.STRING,
         allowNull:false,
