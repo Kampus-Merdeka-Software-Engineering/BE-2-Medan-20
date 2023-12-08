@@ -21,12 +21,13 @@ export const getProductsById = async(req, res) =>{
     }
 }
 export const createProducts = async(req, res) =>{
-    const {name, price} = req.body;
+    const {name, price, product_picture} = req.body;
 
     try {
         const product = await Product.create({
             name: name,
-            price: price
+            price: price,
+            product_picture:product_picture
         })
         res.status(201).json({msg: 'Product Created Successfully',  productId: product.id});
     } catch (error) {

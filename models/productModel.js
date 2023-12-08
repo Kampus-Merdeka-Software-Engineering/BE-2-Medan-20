@@ -17,6 +17,10 @@ const Product = db.define('products', {
         type: DataTypes.FLOAT,
         allowNull: true,
     },
+    product_picture:{
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
 });
 
 export default Product;
