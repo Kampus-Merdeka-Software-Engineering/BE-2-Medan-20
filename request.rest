@@ -1,54 +1,39 @@
-    GET http://localhost:5000/product
+GET be-2-medan-20-production.up.railway.app/product
 
-    ###
-    GET be-2-medan-20-production.up.railway.app/product/1
+###
+POST  be-2-medan-20-production.up.railway.app/product
+Content-Type: application/json
+{
+    "name": "Pad Thai",
+    "price": 30.99,
+    "product_picture": "/sayur2.png"
+}
 
-    ###
-    POST http://localhost:5000/product
-    Content-Type: application/json
+###
+POST http://localhost:5000/add-to-order
+Content-Type: application/json
 
-    {
-        "name": "Juice Milkshake Banana",
-        "price": 12.99,
-        "product_picture":"/drink4.jpg"
-    }
-
-    ###
-    PATCH  be-2-medan-20-production.up.railway.app/product/1
-    Content-Type: application/json
-
-    {
-        "name": "Bionico Fruit salad",
-        "price": 19.99
-    }
-
-    ###
-    DELETE be-2-medan-20-production.up.railway.app/product/3
-
-    ###
-    POST be-2-medan-20-production.up.railway.app/add-to-order
-    Content-Type: application/json
-
-    {
+{
         "productId": 1,
         "name": "Bionico Fruit salad",
         "price": 19.99,
         "quantity": 2
-    }
+}
 
-    ###
-    GET be-2-medan-20-production.up.railway.app/view-order/1
+###
+GET http://localhost:5000/view-order/1
 
-    ###
-    POST be-2-medan-20-production.up.railway.app/place-order
-    Content-Type: application/json
+###
+POST http://localhost:5000/place-order
+Content-Type: application/json
 
-    {
+{
         "orderId": 1,
         "name": "Jhon",
         "phone": "123456789",
         "address": "Jl. Merdeka"
     }
 
-    ###
-    GET be-2-medan-20-production.up.railway.app/view-order-detail/1
+
+###
+GET http://localhost:5000/view-order-detail/1
