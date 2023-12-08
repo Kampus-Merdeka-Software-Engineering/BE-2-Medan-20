@@ -1,54 +1,54 @@
-GET http://localhost:5000/product
+    GET http://localhost:5000/product
 
-###
-GET http://localhost:5000/product/1
+    ###
+    GET be-2-medan-20-production.up.railway.app/product/1
 
-###
-POST http://localhost:5000/product
-Content-Type: application/json
+    ###
+    POST http://localhost:5000/product
+    Content-Type: application/json
 
-{
-    "name": "Bionico Fruit salad",
-    "price": 19.99
-}
+    {
+        "name": "Juice Milkshake Banana",
+        "price": 12.99,
+        "product_picture":"/drink4.jpg"
+    }
 
-###
-PATCH  http://localhost:5000/product/1
-Content-Type: application/json
+    ###
+    PATCH  be-2-medan-20-production.up.railway.app/product/1
+    Content-Type: application/json
 
-{
-    "name": "Bionico Fruit salad",
-    "price": 19.99
-}
+    {
+        "name": "Bionico Fruit salad",
+        "price": 19.99
+    }
 
-###
-DELETE http://localhost:5000/product/3
+    ###
+    DELETE be-2-medan-20-production.up.railway.app/product/3
 
-###
-POST http://localhost:5000/add-to-order
-Content-Type: application/json
+    ###
+    POST be-2-medan-20-production.up.railway.app/add-to-order
+    Content-Type: application/json
 
-{
-    "productId": 1,
-    "name": "Bionico Fruit salad",
-    "price": 19.99,
-    "quantity": 2
-}
+    {
+        "productId": 1,
+        "name": "Bionico Fruit salad",
+        "price": 19.99,
+        "quantity": 2
+    }
 
-###
-GET http://localhost:5000/view-order/6
+    ###
+    GET be-2-medan-20-production.up.railway.app/view-order/1
 
-###
-POST http://localhost:5000/place-order
-Content-Type: application/json
+    ###
+    POST be-2-medan-20-production.up.railway.app/place-order
+    Content-Type: application/json
 
-{
-    "orderId": 6,
-    "name": "Jhon",
-    "phone": "123456789",
-    "address": "Jl. Merdeka",
-    "isCompleted": true
-}
+    {
+        "orderId": 1,
+        "name": "Jhon",
+        "phone": "123456789",
+        "address": "Jl. Merdeka"
+    }
 
-###
-GET http://localhost:5000/view-order-detail/6
+    ###
+    GET be-2-medan-20-production.up.railway.app/view-order-detail/1
